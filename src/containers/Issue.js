@@ -6,7 +6,7 @@ import { actionCreators } from '../actions'
 const mapStateToProps = ({ user, issue }) => {
   return {
     data: issue.data,
-    user
+    user: user.data
   }
 }
 

@@ -1,12 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { devToolsEnhancer } from 'redux-devtools-extension'
-import reducer from './reducers'
-import App from './App'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import reducer from './reducers';
+import saga from './sagas';
+import App from './App';
 
-const store = createStore(reducer, devToolsEnhancer())
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(
+  reducer,
+  composeWithDevTools(applyMiddleware(sagaMiddleware)),
+);
+
+sagaMiddleware.run(saga)
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,5 +22,5 @@ ReactDOM.render(
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
-)
+  document.getElementById('root'),
+);

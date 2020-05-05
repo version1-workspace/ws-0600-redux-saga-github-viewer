@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "camelcase-keys": "https://github.com/sindresorhus/camelcase-keys.git",
     "dayjs": "^1.8.24",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
