@@ -6,6 +6,9 @@
 export const ISSUE_ADD = 'ISSUE_ADD'
 export const ISSUE_REMOVE = 'ISSUE_REMOVE'
 export const ISSUE_UPDATE = 'ISSUE_UPDATE'
+export const ISSUE_FETCH_REQUESTED = 'ISSUE_FETCH_REQUESTED'
+export const ISSUE_FETCH_SUCCEEDED = 'ISSUE_FETCH_SUCCEEDED'
+export const ISSUE_FETCH_FAILED = 'ISSUE_FETCH_FAILED'
 
 /* ui/modal */
 export const MODAL_HIDE = 'MODAL_HIDE'
@@ -70,6 +73,14 @@ const userFetchRequested = () => {
   }
 }
 
+/* issue */
+const issueFetchRequested = (payload) => {
+  return {
+    type: ISSUE_FETCH_REQUESTED,
+    payload
+  }
+}
+
 export const actionCreators = {
   addIssue,
   removeIssue,
@@ -77,5 +88,6 @@ export const actionCreators = {
   showModal,
   removeModal,
   hideModal,
-  userFetchRequested
+  userFetchRequested,
+  issueFetchRequested
 }

@@ -1,7 +1,5 @@
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Profile from '../pages/Profile'
-import { actionCreators } from '../actions'
 
 const mapStateToProps = ({ user }) => {
   return {
@@ -9,10 +7,4 @@ const mapStateToProps = ({ user }) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    fetchUser: actionCreators.userFetchRequested
-  }, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Profile)
+export default connect(mapStateToProps, null)(Profile)

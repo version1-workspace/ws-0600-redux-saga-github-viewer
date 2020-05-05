@@ -4,11 +4,6 @@ import PropTypes from 'prop-types'
 import dayjs from 'dayjs'
 import { colors } from '../../styles/variable'
 
-const statusLabel = {
-  0: 'Open',
-  1: 'Close'
-}
-
 const Container = styled.tr`
   cursor: pointer;
 
@@ -18,7 +13,7 @@ const Container = styled.tr`
 `
 
 const IssueItem = ({ checked, onClick, onCheck, issue }) => {
-  const { id, title, status, createBy, createdAt, updatedAt } = issue
+  const { id, title, state, user, createdAt, updatedAt } = issue
   const _onClick = useCallback(
     (e) => {
       onClick(issue)
@@ -38,8 +33,8 @@ const IssueItem = ({ checked, onClick, onCheck, issue }) => {
         <input type="checkbox" checked={checked} onClick={_onCheck} />
       </td>
       <td className="outline">{title}</td>
-      <td>{statusLabel[status]}</td>
-      <td>{createBy}</td>
+      <td>{state}</td>
+      <td>{user.login}</td>
       <td>{dayjs(createdAt).format('MM-DD-YYYY')}</td>
       <td>{dayjs(updatedAt).format('MM-DD-YYYY')}</td>
     </Container>

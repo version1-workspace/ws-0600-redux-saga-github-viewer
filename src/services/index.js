@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const username = process.env.REACT_APP_GITHUB_USERNAME;
 const accessToken = process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
+const repo = process.env.REACT_APP_GITHUB_REPO;
 
 const client = axios.create({
   baseURL: 'https://api.github.com',
@@ -21,9 +22,9 @@ export const fetchUser = async () => {
   }
 };
 
-export const fetchIssueList = async ({params}) => {
+export const fetchIssueList = async ({ owner, params}) => {
   try {
-    const res = await client.get(`/issues`, {
+    const res = await client.get(`/repos/${owner}/${repo}/issues`, {
       params,
     });
     return res.data;

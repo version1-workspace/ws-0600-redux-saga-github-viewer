@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { GlobalStyle } from './styles'
@@ -17,7 +17,10 @@ const Content = styled.div`
   padding: 32px 16px;
 `
 
-const App = () => {
+const App = ({ fetchUser }) => {
+  useEffect(() => {
+    fetchUser()
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <Router basename="/redux-saga-github-viewer">
       <Container>

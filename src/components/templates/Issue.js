@@ -1,28 +1,28 @@
-import React, { useCallback, useMemo, useState } from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { colors } from '../../styles/variable'
-import Button from '../atoms/Button'
-import TextField from '../atoms/TextField'
-import IssueItem from '../organisms/IssueItem'
-import NewIssue from '../templates/NewIssue'
-import EditIssue from '../templates/EditIssue'
+import React, {useCallback, useMemo, useState, useEffect} from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import {colors} from '../../styles/variable';
+import Button from '../atoms/Button';
+import TextField from '../atoms/TextField';
+import IssueItem from '../organisms/IssueItem';
+import NewIssue from '../templates/NewIssue';
+import EditIssue from '../templates/EditIssue';
 
-const borderStyle = `1px solid ${colors.border}`
+const borderStyle = `1px solid ${colors.border}`;
 
 const Container = styled.div`
   padding: 16px;
   margin-top: 16px;
-`
+`;
 
 const Content = styled.div`
   overflow: scroll;
-`
+`;
 const Header = styled.div`
   display: flex;
   align-items: center;
-`
-const Heading = styled.div``
+`;
+const Heading = styled.div``;
 const SearchForm = styled.div`
   padding: 8px 16px;
   display: flex;
@@ -31,11 +31,11 @@ const SearchForm = styled.div`
   .text-field-container {
     width: 100%;
   }
-`
+`;
 
 const Action = styled.div`
   display: flex;
-`
+`;
 
 const Table = styled.table`
   border: ${borderStyle};
@@ -60,65 +60,73 @@ const Table = styled.table`
   .no-divider {
     border-bottom: 0;
   }
-`
+`;
 
 const Issue = ({
   data,
   user,
   showModal,
   addIssue,
+  fetchIssueList,
   removeIssue,
   updateIssue,
-  removeModal
+  removeModal,
 }) => {
-  const [searchWord, setSearchWord] = useState('')
-  const list = useMemo(() => {
-    const values = Object.values(data)
-    if (!searchWord) {
-      return values
+  useEffect(() => {
+    if (user) {
+      fetchIssueList({owner: user.name});
     }
-    return values.filter((value) => value.title.includes(searchWord))
-  }, [data, searchWord])
-  const [checked, setChecked] = useState({})
+  }, [user, fetchIssueList]);
+  const [searchWord, setSearchWord] = useState('');
+  const list = useMemo(() => {
+    const values = Object.values(data);
+    if (!searchWord) {
+      return values;
+    }
+    return values.filter(value => value.title.includes(searchWord));
+  }, [data, searchWord]);
+  const [checked, setChecked] = useState({});
   const allChecked = useMemo(
     () =>
       Object.keys(data).length &&
       Object.keys(checked).length === Object.keys(data).length,
-    [data, checked]
-  )
+    [data, checked],
+  );
   const onCheckAll = useCallback(() => {
     if (allChecked) {
-      setChecked({})
-      return
+      setChecked({});
+      return;
     }
-    setChecked(data)
-  }, [allChecked, data])
+    setChecked(data);
+  }, [allChecked, data]);
 
   const onCheck = useCallback(
-    ({ id }) => {
-      const newIds = { ...checked }
+    ({id}) => {
+      const newIds = {...checked};
       if (checked[id]) {
-        delete newIds[id]
+        delete newIds[id];
       } else {
-        newIds[id] = data[id]
+        newIds[id] = data[id];
       }
-      setChecked(newIds)
+      setChecked(newIds);
     },
-    [data, checked]
-  )
+    [data, checked],
+  );
 
   const onNew = useCallback(() => {
-    const onAdd = (payload) => {
-      addIssue(payload)
-      removeModal()
-    }
+    const onAdd = payload => {
+      addIssue(payload);
+      removeModal();
+    };
     showModal({
-      component: <NewIssue user={user} onSubmit={onAdd} onClose={removeModal} />
-    })
-  }, [user, showModal, removeModal, addIssue])
+      component: (
+        <NewIssue user={user} onSubmit={onAdd} onClose={removeModal} />
+      ),
+    });
+  }, [user, showModal, removeModal, addIssue]);
 
   const onEdit = useCallback(
-    (issue) => {
+    issue => {
       showModal({
         component: (
           <EditIssue
@@ -126,17 +134,17 @@ const Issue = ({
             onSubmit={updateIssue}
             onClose={removeModal}
           />
-        )
-      })
+        ),
+      });
     },
-    [showModal, removeModal, updateIssue]
-  )
+    [showModal, removeModal, updateIssue],
+  );
 
   const onRemove = useCallback(() => {
-    Object.values(checked).forEach((issue) => {
-      removeIssue({ issue })
-    })
-  }, [checked, removeIssue])
+    Object.values(checked).forEach(issue => {
+      removeIssue({issue});
+    });
+  }, [checked, removeIssue]);
 
   return (
     <Container>
@@ -180,7 +188,7 @@ const Issue = ({
           </thead>
           <tbody>
             {list.length ? (
-              list.map((item) => {
+              list.map(item => {
                 return (
                   <IssueItem
                     key={item.id}
@@ -189,7 +197,7 @@ const Issue = ({
                     onClick={onEdit}
                     onCheck={onCheck}
                   />
-                )
+                );
               })
             ) : (
               <></>
@@ -203,8 +211,8 @@ const Issue = ({
         </Table>
       </Content>
     </Container>
-  )
-}
+  );
+};
 
 Issue.propTypes = {
   data: PropTypes.object,
@@ -213,7 +221,8 @@ Issue.propTypes = {
   removeModal: PropTypes.func,
   addIssue: PropTypes.func,
   removeIssue: PropTypes.func,
-  updateIssue: PropTypes.func
-}
+  updateIssue: PropTypes.func,
+  fetchIssueList: PropTypes.func,
+};
 
-export default Issue
+export default Issue;
