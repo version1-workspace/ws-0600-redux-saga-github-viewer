@@ -57,14 +57,14 @@ const Footer = styled.div`
 const EditIssue = ({ issue, onSubmit, onClose }) => {
   const [validationError, setValidationError] = useState('')
   const [title, setTitle] = useState(issue.title)
-  const [status, setStatus] = useState(issue.status)
+  const [state, setState] = useState(issue.state)
   const [body, setBody] = useState(issue.body)
 
   const onChangeStatus = useCallback(
     (e) => {
-      setStatus(e.target.value)
+      setState(e.target.value)
     },
-    [setStatus]
+    [setState]
   )
 
   const _onSubmit = useCallback(() => {
@@ -84,12 +84,12 @@ const EditIssue = ({ issue, onSubmit, onClose }) => {
         ...issue,
         title,
         body,
-        status,
+        state,
         updatedAt: now
       }
     })
     onClose()
-  }, [issue, title, status, body, onSubmit, onClose, setValidationError])
+  }, [issue, title, state, body, onSubmit, onClose, setValidationError])
 
   return (
     <Container>
@@ -113,9 +113,9 @@ const EditIssue = ({ issue, onSubmit, onClose }) => {
         </Field>
         <Field>
           <Label>ステータス</Label>
-          <select value={status} onChange={onChangeStatus}>
-            <option value="0">Open</option>
-            <option value="1">Close</option>
+          <select value={state} onChange={onChangeStatus}>
+            <option value="open">Open</option>
+            <option value="close">Close</option>
           </select>
         </Field>
       </Form>

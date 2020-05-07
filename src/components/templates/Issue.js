@@ -132,13 +132,14 @@ const Issue = ({
   const onEdit = useCallback(
     issue => {
       const onUpdate = ({ issue }) => {
-        const { title, body, number } = issue
+        const { title, body, state, number } = issue
         updateIssue(
           {
             issueNumber: number,
             issue: {
               title,
-              body
+              body,
+              state
             }
           }
         );
@@ -158,7 +159,7 @@ const Issue = ({
   );
 
   const onRemove = useCallback(() => {
-    const removeIssue = ({ issue }) => {
+    const removeIssue = (issue) => {
       updateIssue({
         issueNumber: issue.number,
         issue: {

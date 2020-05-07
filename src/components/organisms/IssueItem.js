@@ -12,8 +12,10 @@ const Container = styled.tr`
   }
 `
 
+const onClickLink = e => e.stopPropagation()
+
 const IssueItem = ({ checked, onClick, onCheck, issue }) => {
-  const { id, title, state, user, createdAt, updatedAt } = issue
+  const { id, title, state, user, htmlUrl, createdAt, updatedAt } = issue
   const _onClick = useCallback(
     (e) => {
       onClick(issue)
@@ -27,12 +29,13 @@ const IssueItem = ({ checked, onClick, onCheck, issue }) => {
     },
     [issue, onCheck]
   )
+
   return (
     <Container key={id} onClick={_onClick}>
       <td>
         <input type="checkbox" checked={checked} onClick={_onCheck} />
       </td>
-      <td className="outline">{title}</td>
+      <td className="outline"><a onClick={onClickLink} href={htmlUrl}>{title}</a></td>
       <td>{state}</td>
       <td>{user.login}</td>
       <td>{dayjs(createdAt).format('MM-DD-YYYY')}</td>
