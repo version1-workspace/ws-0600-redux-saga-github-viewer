@@ -66,11 +66,11 @@ const Issue = ({
   data,
   user,
   showModal,
+  removeModal,
   addIssue,
   fetchIssueList,
-  removeIssue,
-  updateIssue,
-  removeModal,
+  createIssue,
+  updateIssue
 }) => {
   useEffect(() => {
     if (user) {
@@ -114,8 +114,12 @@ const Issue = ({
   );
 
   const onNew = useCallback(() => {
-    const onAdd = payload => {
-      addIssue(payload);
+    const onAdd = ({ issue }) => {
+      const { title, body } = issue
+      createIssue({
+        title,
+        body
+      });
       removeModal();
     };
     showModal({
@@ -123,15 +127,28 @@ const Issue = ({
         <NewIssue user={user} onSubmit={onAdd} onClose={removeModal} />
       ),
     });
-  }, [user, showModal, removeModal, addIssue]);
+  }, [user, showModal, removeModal, createIssue]);
 
   const onEdit = useCallback(
     issue => {
+      const onUpdate = ({ issue }) => {
+        const { title, body, number } = issue
+        updateIssue(
+          {
+            issueNumber: number,
+            issue: {
+              title,
+              body
+            }
+          }
+        );
+        removeModal();
+      };
       showModal({
         component: (
           <EditIssue
             issue={issue}
-            onSubmit={updateIssue}
+            onSubmit={onUpdate}
             onClose={removeModal}
           />
         ),
@@ -141,10 +158,18 @@ const Issue = ({
   );
 
   const onRemove = useCallback(() => {
+    const removeIssue = ({ issue }) => {
+      updateIssue({
+        issueNumber: issue.number,
+        issue: {
+          state: 'closed'
+        }
+      });
+    };
     Object.values(checked).forEach(issue => {
-      removeIssue({issue});
+      removeIssue(issue);
     });
-  }, [checked, removeIssue]);
+  }, [checked, updateIssue]);
 
   return (
     <Container>

@@ -33,27 +33,23 @@ export const fetchIssueList = async ({ owner, params}) => {
   }
 };
 
-export const createIssue = async ({owner, repo, data}) => {
+export const createIssue = async ({owner, data}) => {
   try {
-    const res = await client.post(`/repos/${owner}/${repo}/issues`, {
-      data,
-    });
+    const res = await client.post(`/repos/${owner}/${repo}/issues`, data);
     return res.data;
   } catch (e) {
     console.error(e);
   }
 };
 
-export const updateIssue = async ({owner, repo, issueNumber, data}) => {
+export const updateIssue = async ({owner, issueNumber, data}) => {
   try {
     const res = await client.post(
       `/repos/${owner}/${repo}/issues/${issueNumber}`,
-      {
-        data,
-      },
+      data
     );
     if (res.data) {
-      debugger;
+      return res.data
     }
   } catch (e) {
     console.error(e);

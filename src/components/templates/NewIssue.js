@@ -57,7 +57,7 @@ const Footer = styled.div`
 const NewIssue = ({ user, onSubmit, onClose }) => {
   const [validationError, setValidationError] = useState('')
   const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
+  const [body, setBody] = useState('')
 
   const _onSubmit = useCallback(() => {
     if (!title) {
@@ -65,23 +65,18 @@ const NewIssue = ({ user, onSubmit, onClose }) => {
       return
     }
 
-    if (!description) {
+    if (!body) {
       setValidationError('説明を入力してください')
       return
     }
 
-    const now = new Date()
     onSubmit({
       issue: {
         title,
-        description,
-        createBy: user.name,
-        status: 0,
-        createdAt: now,
-        updatedAt: now
+        body
       }
     })
-  }, [user, title, description, onSubmit, setValidationError])
+  }, [title, body, onSubmit, setValidationError])
 
   return (
     <Container>
@@ -98,9 +93,9 @@ const NewIssue = ({ user, onSubmit, onClose }) => {
         <Field>
           <Label>説明</Label>
           <TextArea
-            value={description}
+            value={body}
             placeholder="説明を入力してください"
-            onChangeText={setDescription}
+            onChangeText={setBody}
           />
         </Field>
       </Form>

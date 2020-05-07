@@ -12,7 +12,11 @@ const mapStateToProps = ({ user, issue }) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    fetchIssueList: actionCreators.issueFetchRequested
+    fetchIssueList: actionCreators.issueFetchRequested,
+    createIssue: actionCreators.issueCreateRequested,
+    updateIssue: actionCreators.issueUpdateRequested,
+    showModal: actionCreators.showModal,
+    removeModal: actionCreators.removeModal
   }, dispatch)
 }
 
