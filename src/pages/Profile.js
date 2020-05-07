@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { device } from '../styles'
 import { colors } from '../styles/variable'
 
 const Container = styled.div`
@@ -17,15 +18,24 @@ const Content = styled.div`
   display: flex;
   border-radius: 6px;
   border: ${borderStyle};
+  @media ${device.mobile} {
+    flex-wrap: wrap;
+  }
 `
 
 const Left = styled.div`
   padding: 16px;
   width: 50%;
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `
 const Right = styled.div`
   padding: 16px;
   width: 50%;
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `
 
 const Group = styled.div``

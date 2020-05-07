@@ -21,11 +21,11 @@ const Content = styled.div``
 const Tabs = [
   {
     key: 'issue',
-    component: <Issue />
+    component: (key) => <Issue key={key}/>
   },
   {
     key: 'pull-requests',
-    component: <PullRequestTab />
+    component: (key) => <PullRequestTab key={key}/>
   }
 ]
 
@@ -35,7 +35,7 @@ const Index = () => {
     <Container>
       <Content>
         <TabHeader selected={selected} onChange={setSelected} tabs={tabs} />
-        {Tabs.map((item) => (selected === item.key ? item.component : <></>))}
+        {Tabs.map((item) => (selected === item.key ? item.component(item.key) : <div key={item.key}></div>))}
       </Content>
     </Container>
   )
