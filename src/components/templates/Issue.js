@@ -226,7 +226,7 @@ const Issue = ({
                   <IssueItem
                     key={item.id}
                     issue={item}
-                    checked={checked[item.id]}
+                    checked={!!checked[item.id]}
                     onClick={onEdit}
                     onCheck={onCheck}
                   />

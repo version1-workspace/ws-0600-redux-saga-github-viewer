@@ -33,7 +33,7 @@ const IssueItem = ({ checked, onClick, onCheck, issue }) => {
   return (
     <Container key={id} onClick={_onClick}>
       <td>
-        <input type="checkbox" checked={checked} onClick={_onCheck} />
+        <input type="checkbox" defaultChecked={checked} onClick={_onCheck} />
       </td>
       <td className="outline"><a onClick={onClickLink} href={htmlUrl}>{title}</a></td>
       <td>{state}</td>
