@@ -3,6 +3,8 @@ import axios from 'axios';
 const username = process.env.REACT_APP_GITHUB_USERNAME;
 const accessToken = process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
 const repo = process.env.REACT_APP_GITHUB_REPO;
+console.log('username', username)
+console.log('repo', repo)
 
 const client = axios.create({
   baseURL: 'https://api.github.com',
