@@ -159,6 +159,13 @@ const Issue = ({
   );
 
   const onRemove = useCallback(() => {
+    if(!window.confirm("削除しますか？")) {
+      return
+    }
+    if(!Object.values(checked).length) {
+      window.alert("削除するissueを選択してください")
+      return
+    }
     const removeIssue = (issue) => {
       updateIssue({
         issueNumber: issue.number,

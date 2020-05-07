@@ -15,6 +15,7 @@ function* fetchIssueList(action) {
     yield put({type: ActionType.ISSUE_FETCH_SUCCEEDED, payload: {issues}});
   } catch (e) {
     console.error(e)
+    window.alert("一覧の取得に失敗しました")
     yield put({
       type: ActionType.ISSUE_FETCH_FAILED,
       payload: {message: 'issue一覧の取得に失敗しました'},
@@ -30,6 +31,7 @@ function* createIssue(action) {
     yield put({ type: ActionType.ISSUE_FETCH_REQUESTED });
   } catch (e) {
     console.error(e)
+    window.alert("作成に失敗しました")
     yield put({
       type: ActionType.ISSUE_CREATE_FAILED,
       payload: {message: 'issueの作成に失敗しました'},
@@ -50,6 +52,7 @@ function* updateIssue(action) {
     yield put({ type: ActionType.ISSUE_FETCH_REQUESTED });
   } catch (e) {
     console.error(e)
+    window.alert("更新に失敗しました")
     yield put({
       type: ActionType.ISSUE_UPDATE_FAILED,
       payload: {message: 'issueの更新に失敗しました'},
