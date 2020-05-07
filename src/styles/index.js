@@ -56,11 +56,27 @@ export const GlobalStyle = createGlobalStyle`
   .ReactModal__Content {
     margin: auto;
     width: 60%;
+    bottom: auto !important;
+    top: 15% !important;
 
     @media ${device.mobile} {
       width: 100%;
       right: 0 !important;
       left: 0 !important;
+      top: 0px !important;
     }
+  }
+
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open{
+      opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close{
+    opacity: 0;
   }
 `
