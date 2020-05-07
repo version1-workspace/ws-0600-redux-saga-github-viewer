@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { colors } from '../../styles/variable'
+import {device} from '../../styles';
 import DropDown from './DropDown'
 
 const Container = styled.div`
@@ -28,6 +29,10 @@ const NavigationLinks = styled.ul`
   display: flex;
   width: 100%;
   padding: 0 32px;
+
+  @media ${device.mobile} {
+    display: none;
+  }
 
   li {
     margin-right: 16px;

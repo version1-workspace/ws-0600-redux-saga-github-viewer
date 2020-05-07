@@ -2,6 +2,7 @@ import React, {useCallback, useMemo, useState, useEffect} from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {colors} from '../../styles/variable';
+import {device} from '../../styles';
 import Button from '../atoms/Button';
 import TextField from '../atoms/TextField';
 import IssueItem from '../organisms/IssueItem';
@@ -21,6 +22,10 @@ const Content = styled.div`
 const Header = styled.div`
   display: flex;
   align-items: center;
+
+  @media ${device.mobile} {
+    flex-wrap: wrap;
+  }
 `;
 const Heading = styled.div``;
 const SearchForm = styled.div`
@@ -28,6 +33,9 @@ const SearchForm = styled.div`
   display: flex;
   width: 100%;
 
+  @media ${device.mobile} {
+    padding-left: 0;
+  }
   .text-field-container {
     width: 100%;
   }
@@ -35,6 +43,10 @@ const SearchForm = styled.div`
 
 const Action = styled.div`
   display: flex;
+
+  @media ${device.mobile} {
+    margin: 16px 0;
+  }
 `;
 
 const Table = styled.table`
