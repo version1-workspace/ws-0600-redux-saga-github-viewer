@@ -1,5 +1,7 @@
 # Redux Saga Github Viewer
 
+## 概要
+
 こちらのリポジトリ は、[こちら](https://github.com/version-1/redux-github-viewer)のリポジトリ の続きの課題です。
 ソースをコピーして、すでに作成したソースを元に課題を進めてください。
 
@@ -12,6 +14,7 @@
 
 [デモ動画](https://youtu.be/IgqB1A6PJTY)
 
+<< 動画の流れ >>
 
 1. issueの作成
 2. issueの更新
