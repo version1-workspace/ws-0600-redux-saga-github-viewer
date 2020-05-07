@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import { GlobalStyle } from './styles'
 import Index from './pages/Index'
 import Profile from './containers/Profile'
@@ -43,6 +45,7 @@ const App = ({ fetchUser }) => {
           </Switch>
         </Content>
         <Modal />
+        <ToastContainer />
       </Container>
     </Router>
   )
