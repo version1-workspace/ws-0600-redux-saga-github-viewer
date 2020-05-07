@@ -4,11 +4,11 @@ import Modal from 'react-modal'
 
 Modal.setAppElement('#root')
 
-const ModalContainer = ({ show, component }) => {
+const ModalContainer = ({ show, type, component }) => {
   if (!show) {
     return <></>
   }
-  return <Modal isOpen={show}>{component}</Modal>
+  return <Modal className="ReactModal__Content__modal" isOpen={show}>{component}</Modal>
 }
 
 ModalContainer.propTypes = {

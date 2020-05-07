@@ -53,17 +53,23 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  .ReactModal__Content {
-    margin: auto;
+  .ReactModal__Content__modal {
+    background: white;
+    border: 1px solid lightgray;
+    margin: 16px auto;
+    padding: 16px;
     width: 60%;
+    outline: none;
     bottom: auto !important;
     top: 15% !important;
 
     @media ${device.mobile} {
       width: 100%;
+      height: 100vh;
+      margin: 0;
       right: 0 !important;
       left: 0 !important;
-      top: 0px !important;
+      top: 0 !important;
     }
   }
 
