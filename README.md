@@ -27,7 +27,9 @@
 - Reduxでの状態管理
 - React Routerでのページ設定とページ遷移
 - Eslint + Prettier
-- Redux Sagaを使用したAPI通信
+- HTTPリクエスト/レスポンスの仕組み
+- AjaxでのHTTPリクエストの実装
+- Redux Sagaを使用した非同期通信
 - Hooks API
 
 ## 課題の進め方
@@ -35,7 +37,7 @@
 #### 0. 課題用リポジトリの作成
 
 フォークでなく個人のアカウントにリポジトリ を作成してください。
-redux-github-viewerのソースを元にリポジトリ を作成ください
+redux-github-viewerのソースを元にリポジトリを作成ください
 
 #### 1. 実装に必要な概念を学ぶ
 
@@ -46,9 +48,13 @@ redux-github-viewerのソースを元にリポジトリ を作成ください
 
 ### REST APIについて
 - [HTTPリクエスト/レスポンスの構成要素を初心者にも分かるように解説してみた](https://qiita.com/koheiyamaguchi0203/items/5777c4653a01ae4c7b06)
+- [初心者目線でAjaxの説明](https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9)
 - [RESTful APIとは何なのか](https://qiita.com/NagaokaKenichi/items/0647c30ef596cedf4bf2)
 - [0からREST APIについて調べてみた](https://qiita.com/masato44gm/items/dffb8281536ad321fb08)
-- [初心者目線でAjaxの説明](https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9)
+
+### 環境変数とNode.jsのprocess.env
+
+### HTTPクライアントのAxios
 - [Axios公式](https://github.com/axios/axios)
 - [axiosライブラリを使ってリクエストする](https://qiita.com/reflet/items/d5658d5d69e8e1ccd489)
 - [axios、async/awaitを使ったHTTPリクエスト(Web APIを実行)](https://qiita.com/shisama/items/61cdcc09dc69fd8d3127)
@@ -67,28 +73,16 @@ redux-github-viewerのソースを元にリポジトリ を作成ください
 
 ### チェックリスト
 
-- [ ] reactのリポジトリの作成
+- [ ] reactのリポジトリの作成(redux-github-viewerからソースをコピー)
 - [ ] yarnでのパッケージインストール
-  - [ ] redux, react-reduxのインストール
-  - [ ] redux-devtoolのインストール
-  - [ ] react-routerのインストール
-  - [ ] styled-componentsのインストール
-  - [ ] eslint+prettierのインストール
-  - [ ] react-modalのインストール
+  - [ ] react-notifyのインストール
+  - [ ] redux-sagaのインストール
+  - [ ] axiosのインストール
 - [ ] ヘッダーの実装
-  - [ ] ヘッダーロゴの実装
-  - [ ] ヘッダーリンクの実装
-  - [ ] メニューの実装（ライブラリを使わずに実装)
 - [ ] topページの実装
-  - [ ] タブの実装(react-router等ライブラリは使わずに実装）
 - [ ] issueページの実装
-  - [ ] 一覧表示
-  - [ ] issueフィルタ機能の実装
-  - [ ] issue作成(react-modalを使って実装)
-  - [ ] issue更新(react-modalを使って実装)
-  - [ ] issue削除(全て選択のチェックボックスも実装）
 - [ ] プロフィールページの実装（userストアにデータベタ書きしたものを表示だけ）
 - [ ] レスポンシブ対応
 
-##### 4. サイトとして公開
+### 注意事項 
 
