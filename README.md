@@ -39,13 +39,20 @@ redux-github-viewerのソースを元にリポジトリ を作成ください
 
 #### 1. 実装に必要な概念を学ぶ
 
-主にメインコンセプト部分中心に
-
+### 引き続きRedux
 - [Redux.js公式](https://redux.js.org/introduction/getting-started)
 - [Redux入門【ダイジェスト版】10分で理解するReduxの基礎](https://qiita.com/kitagawamac/items/49a1f03445b19cf407b7)]
 - [Redux 入門 〜Reduxの基礎を理解する〜](https://qiita.com/soarflat/items/bd319695d156654bbe86)
+
+### REST APIについて
+- [HTTPリクエスト/レスポンスの構成要素を初心者にも分かるように解説してみた](https://qiita.com/koheiyamaguchi0203/items/5777c4653a01ae4c7b06)
+- [RESTful APIとは何なのか](https://qiita.com/NagaokaKenichi/items/0647c30ef596cedf4bf2)
+- [0からREST APIについて調べてみた](https://qiita.com/masato44gm/items/dffb8281536ad321fb08)
+
+### ReduxでのAPI通信 Redux Saga
 - [Redux Saga公式](https://redux-saga.js.org/)
-- [Redux Saga公式](https://redux-saga.js.org/)
+- [redux-sagaをざっくり入門したい](https://hogehuga.com/post-1932/)
+- [redux-sagaで非同期処理と戦う](https://qiita.com/kuy/items/716affc808ebb3e1e8ac)
 
 
 #### 4.デモをみながらGithubViewerを実装
