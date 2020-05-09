@@ -12,15 +12,9 @@
 こちらをGithub Pagesで公開使用となるとAccess Tokenをリポジトリにあげたりしないとできないので、
 一旦公開はしていません。動画を貼り付けるのでそちらを参考にアプリを作成してください。
 
-[デモ動画](https://youtu.be/IgqB1A6PJTY)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd047570-3f8d-4daa-bf70-4b2b563901ab/deploy-status)](https://app.netlify.com/sites/heuristic-liskov-7bdca3/deploys)
 
-<< 動画の流れ >>
-
-1. issueの作成
-2. issueの更新
-3. issueの削除
-4. 画面遷移の確認
-5. レスポンシブの確認
+[デモ](https://heuristic-liskov-7bdca3.netlify.app/)
 
 ## 課題で身に着けること
 
