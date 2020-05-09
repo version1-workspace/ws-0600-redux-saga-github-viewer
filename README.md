@@ -24,6 +24,8 @@
 - HTTPリクエスト/レスポンスの仕組み
 - AjaxでのHTTPリクエストの実装
 - Redux Sagaを使用した非同期通信
+- Promise, Async, Await
+- イテレータとジェネレータ
 - Hooks API
 
 ## 課題の進め方
