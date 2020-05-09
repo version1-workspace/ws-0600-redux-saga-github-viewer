@@ -104,7 +104,7 @@ developブランチを切って課題を進めて頂くようお願いします�
 react-notifyというライブラリをつかってサイト内のトーストは実行しています。
 作成・更新成功時と失敗時でそれぞれトーストを出して通知するようにしてください。
 
-失敗時の挙動はdeveloperツールを使って確認することができます。
+失敗時の挙動はdeveloperツールを使って一時的にネットワークをオフラインにすることで確認することができます。
 
 ![エラー時のトースト](https://github.com/version-1/redux-saga-github-viewer/blob/master/error-toast.gif)
 
