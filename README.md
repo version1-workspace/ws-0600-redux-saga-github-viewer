@@ -9,8 +9,8 @@
 
 ## デモ
 
-こちらをGithub Pagesで公開使用となるとAccess Tokenをリポジトリにあげたりしないとできないので、
-一旦公開はしていません。動画を貼り付けるのでそちらを参考にアプリを作成してください。
+こちらをAccess Tokenの関係でGithubPagesではなく[Netlify](https://www.netlify.com/)にデプロイして公開しています。
+実装の際の参考にしてください。
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fd047570-3f8d-4daa-bf70-4b2b563901ab/deploy-status)](https://app.netlify.com/sites/heuristic-liskov-7bdca3/deploys)
 
@@ -93,9 +93,24 @@ developブランチを切って課題を進めて頂くようお願いします�
 
 ### 5.netlifyでデモを公開
 
+手順にしたがってNetlifyでアプリを公開してください。
+
+[Netlify公開手順](publish-netilfy)
+
 ### 注意事項 
 
 #### トースト（Notification)について
 
+react-notifyというライブラリをつかってサイト内のトーストは実行しています。
+作成・更新成功時と失敗時でそれぞれトーストを出して通知するようにしてください。
+
+失敗時の挙動はdeveloperツールを使って確認することができます。
+
+
+
+
+
 #### issueの削除について
 
+Github APIの仕様でissueの削除はできないようです。
+issueをcloseステータスに更新する形で実装してください。
