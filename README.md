@@ -74,8 +74,8 @@ developブランチを切って課題を進めて頂くようお願いします�
 
 #### イテレータとジェネレータ
 
-[JavaScript の イテレータ を極める！](https://qiita.com/kura07/items/cf168a7ea20e8c2554c6)
-[イテレーターとジェネレーター](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [JavaScript の イテレータ を極める！](https://qiita.com/kura07/items/cf168a7ea20e8c2554c6)
+- [イテレーターとジェネレーター](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 
 #### ReduxでのAPI通信 Redux Saga
 - [Redux Saga公式](https://redux-saga.js.org/)
