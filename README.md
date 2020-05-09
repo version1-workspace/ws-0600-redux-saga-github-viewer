@@ -64,6 +64,17 @@ developブランチを切って課題を進めて頂くようお願いします�
 - [axiosライブラリを使ってリクエストする](https://qiita.com/reflet/items/d5658d5d69e8e1ccd489)
 - [axios、async/awaitを使ったHTTPリクエスト(Web APIを実行)](https://qiita.com/shisama/items/61cdcc09dc69fd8d3127)
 
+### JavaScriptのアドバンスな機能
+
+#### Promise async, wait
+
+[Promiseの使い方、それに代わるasync/awaitの使い方](https://qiita.com/suin/items/97041d3e0691c12f4974)
+
+#### イテレータとジェネレータ
+
+[JavaScript の イテレータ を極める！](https://qiita.com/kura07/items/cf168a7ea20e8c2554c6)
+[イテレーターとジェネレーター](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+
 #### ReduxでのAPI通信 Redux Saga
 - [Redux Saga公式](https://redux-saga.js.org/)
 - [redux-sagaをざっくり入門したい](https://hogehuga.com/post-1932/)
