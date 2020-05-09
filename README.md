@@ -2,7 +2,7 @@
 
 ## 概要
 
-こちらのリポジトリ は、[こちら](https://github.com/version-1/redux-github-viewer)のリポジトリ の続きの課題です。
+こちらのリポジトリ は、[こちら](https://github.com/version-1/redux-github-viewer)のリポジトリ の続きの課題です。</br>
 ソースをコピーして、すでに作成したソースを元に課題を進めてください。
 
 こちら課題では実際にGithub REST API V3 を使用して、自身のリポジトリ のissueのCRUDを行えるようにしていきます。
