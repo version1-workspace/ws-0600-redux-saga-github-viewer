@@ -1,14 +1,12 @@
 {
   "name": "redux-github-viewer",
   "version": "1.0.0",
-  "homepage": "https://version-1.github.io/redux-saga-github-viewer/",
   "repository": "git@github.com:version-1/redux-saga-github-viewer.git",
   "author": "version-1 <j.onodera26@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "react-scripts build",
-    "deploy": "gh-pages -d build"
+    "build": "react-scripts build"
   },
   "dependencies": {
     "axios": "^0.19.2",
