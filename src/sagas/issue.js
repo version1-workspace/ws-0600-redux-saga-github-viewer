@@ -9,11 +9,13 @@ const getUser = state => state.user.data
 const success = (message) => toast(message, {
   position: toast.POSITION.TOP_CENTER,
   className: 'toast-success',
+  autoClose: false,
   hideProgressBar: true
 });
 const error = (message) => toast(message, {
   position: toast.POSITION.TOP_CENTER,
   className: 'toast-error',
+  autoClose: false,
   hideProgressBar: true
 });
 
@@ -66,7 +68,7 @@ function* updateIssue(action) {
     success("issueを更新しました")
   } catch (e) {
     console.error(e)
-    window.alert("更新に失敗しました")
+    error("更新に失敗しました")
     yield put({
       type: ActionType.ISSUE_UPDATE_FAILED,
       payload: {message: 'issueの更新に失敗しました'},

@@ -189,6 +189,7 @@ const Issue = ({
     Object.values(checked).forEach(issue => {
       removeIssue(issue);
     });
+    setChecked({});
   }, [checked, updateIssue]);
 
   return (

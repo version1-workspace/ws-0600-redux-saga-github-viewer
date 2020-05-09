@@ -85,4 +85,18 @@ export const GlobalStyle = createGlobalStyle`
   .ReactModal__Overlay--before-close{
     opacity: 0;
   }
+
+  .toast-success {
+    background: ${colors.success};
+    color: white;
+  }
+
+  .toast-error {
+    background: ${colors.danger};
+    color: white;
+  }
+
+  .Toastify__close-button {
+    color: white;
+  }
 `

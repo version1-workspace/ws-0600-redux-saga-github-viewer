@@ -36,24 +36,14 @@ export const fetchIssueList = async ({ owner, params}) => {
 };
 
 export const createIssue = async ({owner, data}) => {
-  try {
-    const res = await client.post(`/repos/${owner}/${repo}/issues`, data);
-    return res.data;
-  } catch (e) {
-    console.error(e);
-  }
+  const res = await client.post(`/repos/${owner}/${repo}/issues`, data);
+  return res.data;
 };
 
 export const updateIssue = async ({owner, issueNumber, data}) => {
-  try {
-    const res = await client.post(
-      `/repos/${owner}/${repo}/issues/${issueNumber}`,
-      data
-    );
-    if (res.data) {
-      return res.data
-    }
-  } catch (e) {
-    console.error(e);
-  }
+  const res = await client.post(
+    `/repos/${owner}/${repo}/issues/${issueNumber}`,
+    data
+  );
+  return res.data
 };
