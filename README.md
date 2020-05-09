@@ -93,9 +93,11 @@ developブランチを切って課題を進めて頂くようお願いします�
 
 ### 5.netlifyでデモを公開
 
-手順にしたがってNetlifyでアプリを公開してください。
+下記記事を参考にNetlifyでアプリを公開してください。
 
-[Netlify公開手順](publish-netilfy)
+[React+Netlifyで最小のアプリを作る](https://crieit.net/posts/React-Netlify)
+
+package.jsonにhomepageのキーが設定されているとうまくいかないので注意してください。
 
 ### 注意事項 
 
