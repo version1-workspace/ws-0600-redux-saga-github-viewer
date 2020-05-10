@@ -82,7 +82,7 @@ developブランチを切って課題を進めて頂くようお願いします�
 - [redux-sagaをざっくり入門したい](https://hogehuga.com/post-1932/)
 - [redux-sagaで非同期処理と戦う](https://qiita.com/kuy/items/716affc808ebb3e1e8ac)
 
-### 3.デモをみながらGithubViewerを実装
+### 2.デモをみながらGithubViewerを実装
 
 - Pull Reqeustページは仮置きしているのでデモのようにタイトルだけ書いたページを置いておいてください。
 
@@ -108,7 +108,7 @@ developブランチを切って課題を進めて頂くようお願いします�
   - [ ] フォロー数等々ユーザ情報の表示
   - [ ] レスポンシブ
 
-### 5.netlifyでデモを公開
+### 3.netlifyでデモを公開
 
 下記記事を参考にNetlifyでアプリを公開してください。
 
