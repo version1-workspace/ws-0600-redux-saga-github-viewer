@@ -70,7 +70,7 @@ developブランチを切って課題を進めて頂くようお願いします�
 
 #### Promise async, wait
 
-[Promiseの使い方、それに代わるasync/awaitの使い方](https://qiita.com/suin/items/97041d3e0691c12f4974)
+- [Promiseの使い方、それに代わるasync/awaitの使い方](https://qiita.com/suin/items/97041d3e0691c12f4974)
 
 #### イテレータとジェネレータ
 
