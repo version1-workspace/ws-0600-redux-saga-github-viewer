@@ -125,7 +125,7 @@ react-notifyというライブラリをつかってサイト内のトースト�
 
 失敗時の挙動はdeveloperツールを使って一時的にネットワークをオフラインにすることで確認することができます。
 
-![エラー時のトースト](https://github.com/version-1/redux-saga-github-viewer/blob/master/error-toast.gif)
+![エラー時のトースト](error-toast.gif)
 
 
 #### issueの削除について
