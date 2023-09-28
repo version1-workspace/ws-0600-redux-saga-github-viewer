@@ -12,8 +12,6 @@
 こちらをAccess Tokenの関係でGithubPagesではなく[Netlify](https://www.netlify.com/)にデプロイして公開しています。
 実装の際の参考にしてください。
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fd047570-3f8d-4daa-bf70-4b2b563901ab/deploy-status)](https://app.netlify.com/sites/heuristic-liskov-7bdca3/deploys)
-
 [デモ](https://heuristic-liskov-7bdca3.netlify.app/)
 
 ## 課題で身に着けること
