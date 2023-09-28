@@ -41,7 +41,7 @@ developブランチを切って課題を進めて頂くようお願いします�
 
 #### 引き続きRedux
 
-- [Redux.js公式](https://redux.js.org/introduction/getting-started)
+- [Redux.js 公式](https://redux.js.org/introduction/getting-started)
 - [Redux入門【ダイジェスト版】10分で理解するReduxの基礎](https://qiita.com/kitagawamac/items/49a1f03445b19cf407b7)]
 - [Redux 入門 〜Reduxの基礎を理解する〜](https://qiita.com/soarflat/items/bd319695d156654bbe86)
 
