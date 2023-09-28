@@ -1,4 +1,4 @@
-# Redux Saga Github Viewer
+# Redux Github Viewer (API 通信)
 
 ## 概要
 
@@ -23,10 +23,7 @@
 - Eslint + Prettier
 - HTTPリクエスト/レスポンスの仕組み
 - AjaxでのHTTPリクエストの実装
-- Redux Sagaを使用した非同期通信
 - Promise, Async, Await
-- イテレータとジェネレータ
-- Hooks API
 
 ## 課題の進め方
 
@@ -45,6 +42,7 @@ developブランチを切って課題を進めて頂くようお願いします�
 ### 1. 実装に必要な概念を学ぶ
 
 #### 引き続きRedux
+
 - [Redux.js公式](https://redux.js.org/introduction/getting-started)
 - [Redux入門【ダイジェスト版】10分で理解するReduxの基礎](https://qiita.com/kitagawamac/items/49a1f03445b19cf407b7)]
 - [Redux 入門 〜Reduxの基礎を理解する〜](https://qiita.com/soarflat/items/bd319695d156654bbe86)
@@ -71,16 +69,6 @@ developブランチを切って課題を進めて頂くようお願いします�
 #### Promise async, wait
 
 - [Promiseの使い方、それに代わるasync/awaitの使い方](https://qiita.com/suin/items/97041d3e0691c12f4974)
-
-#### イテレータとジェネレータ
-
-- [JavaScript の イテレータ を極める！](https://qiita.com/kura07/items/cf168a7ea20e8c2554c6)
-- [イテレーターとジェネレーター](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-
-#### ReduxでのAPI通信 Redux Saga
-- [Redux Saga公式](https://redux-saga.js.org/)
-- [redux-sagaをざっくり入門したい](https://hogehuga.com/post-1932/)
-- [redux-sagaで非同期処理と戦う](https://qiita.com/kuy/items/716affc808ebb3e1e8ac)
 
 ### 2.デモをみながらGithubViewerを実装
 
