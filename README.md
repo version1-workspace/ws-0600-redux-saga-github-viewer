@@ -79,7 +79,6 @@ developブランチを切って課題を進めて頂くようお願いします�
 - [ ] リポジトリの作成(redux-github-viewerからソースをコピー)
 - [ ] yarnでのパッケージインストール
   - [ ] react-notifyのインストール
-  - [ ] redux-sagaのインストール
   - [ ] axiosのインストール
 - [ ] issueページの実装
   - [ ] issue一覧の取得
