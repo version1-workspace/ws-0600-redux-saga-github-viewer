@@ -49,6 +49,11 @@ const Field = styled.p`
   font-size: 1.2rem;
 `
 
+const Img = styled.img`
+  width: 120px;
+  height: 120px;
+`
+
 const Profile = ({ user, fetchUser }) => {
   useEffect(() => {
     fetchUser()
@@ -64,7 +69,7 @@ const Profile = ({ user, fetchUser }) => {
           <Group>
             <Label>プロフィール</Label>
             <Field>
-              <img src={user.avatarUrl} alt="プロフィール" />
+              <Img src={user.avatarUrl} alt="プロフィール" />
             </Field>
           </Group>
         </Left>

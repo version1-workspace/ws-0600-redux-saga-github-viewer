@@ -22,7 +22,7 @@ const error = (message) => toast(message, {
 function* fetchIssueList(action) {
   try {
     const user = yield select(getUser)
-    const data = yield call(api.fetchIssueList, { owner: user.name });
+    const data = yield call(api.fetchIssueList, { owner: user.login });
     const issues = data.reduce((acc, item) => {
       return {...acc, [item.id]: camelcaseKeys(item, {deep: true})};
     }, {});
@@ -40,7 +40,7 @@ function* fetchIssueList(action) {
 function* createIssue(action) {
   try {
     const user = yield select(getUser)
-    yield call(api.createIssue, { data: action.payload, owner: user.name });
+    yield call(api.createIssue, { data: action.payload, owner: user.login });
     yield put({ type: ActionType.ISSUE_CREATE_SUCCEEDED });
     yield put({ type: ActionType.ISSUE_FETCH_REQUESTED });
     success("issueを作成しました")

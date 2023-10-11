@@ -98,19 +98,19 @@ const Issue = ({
     return values.filter(value => value.title.includes(searchWord));
   }, [data, searchWord]);
   const [checked, setChecked] = useState({});
-  const allChecked = useMemo(
-    () =>
-      Object.keys(data).length &&
-      Object.keys(checked).length === Object.keys(data).length,
-    [data, checked],
-  );
-  const onCheckAll = useCallback(() => {
-    if (allChecked) {
-      setChecked({});
-      return;
-    }
-    setChecked(data);
-  }, [allChecked, data]);
+  const onCheckAll = useCallback(
+    (e) => {
+      if (e.target.checked) {
+        const newIds = list.reduce((acc, it) => {
+          return { ...acc, [it.id]: true }
+        }, [])
+        setChecked(newIds)
+      } else {
+        setChecked({})
+      }
+    },
+    [list]
+  )
 
   const onCheck = useCallback(
     ({id}) => {
@@ -219,11 +219,7 @@ const Issue = ({
           <thead>
             <tr>
               <th>
-                <input
-                  type="checkbox"
-                  defaultChecked={allChecked}
-                  onClick={onCheckAll}
-                />
+                <input type="checkbox" onClick={onCheckAll} />
               </th>
               <th></th>
               <th>ステータス</th>
