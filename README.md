@@ -12,7 +12,8 @@
 こちらをAccess Tokenの関係でGithubPagesではなく[Netlify](https://www.netlify.com/)にデプロイして公開しています。
 実装の際の参考にしてください。
 
-[デモ](https://heuristic-liskov-7bdca3.netlify.app/)
+デモ: [https://vw-redux-saga-github-viewer.netlify.app/](https://vw-redux-saga-github-viewer.netlify.app/)
+
 
 ## 課題で身に着けること
 
