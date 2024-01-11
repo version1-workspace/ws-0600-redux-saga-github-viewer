@@ -61,7 +61,7 @@ function* updateIssue(action) {
     yield call(api.updateIssue, {
       data: issue,
       issueNumber: issueNumber,
-      owner: user.name
+      owner: user.login
     });
     yield put({ type: ActionType.ISSUE_UPDATE_SUCCEEDED });
     yield put({ type: ActionType.ISSUE_FETCH_REQUESTED });

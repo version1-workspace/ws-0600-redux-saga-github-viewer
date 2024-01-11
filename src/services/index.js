@@ -24,7 +24,7 @@ export const fetchUser = async () => {
   }
 };
 
-export const fetchIssueList = async ({ owner, params}) => {
+export const fetchIssueList = async ({owner, params}) => {
   try {
     const res = await client.get(`/repos/${owner}/${repo}/issues`, {
       params,
