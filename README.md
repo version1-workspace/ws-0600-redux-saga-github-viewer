@@ -43,8 +43,6 @@ developブランチを切って課題を進めて頂くようお願いします�
 #### 引き続きRedux
 
 - [Redux.js 公式](https://redux.js.org/introduction/getting-started)
-- [Redux入門【ダイジェスト版】10分で理解するReduxの基礎](https://qiita.com/kitagawamac/items/49a1f03445b19cf407b7)]
-- [Redux 入門 〜Reduxの基礎を理解する〜](https://qiita.com/soarflat/items/bd319695d156654bbe86)
 
 #### REST APIについて
 - [HTTPリクエスト/レスポンスの構成要素を初心者にも分かるように解説してみた](https://qiita.com/koheiyamaguchi0203/items/5777c4653a01ae4c7b06)
