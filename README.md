@@ -103,7 +103,7 @@ package.jsonにhomepageのキーが設定されているとうまくいかない
 
 #### トースト（Notification)について
 
-react-notifyというライブラリをつかってサイト内のトーストは実行しています。
+[react-toastify](https://github.com/fkhadra/react-toastify)というライブラリをつかってサイト内のトーストは実行しています。
 作成・更新成功時と失敗時でそれぞれトーストを出して通知するようにしてください。
 
 失敗時の挙動はdeveloperツールを使って一時的にネットワークをオフラインにすることで確認することができます。
